@@ -89,7 +89,7 @@
         size: 20,
         static: null,
         density: 10,
-        frictionAir: 0.5,
+        frictionAir: 0.01,
         fillColor: 'lightgrey',
         strokeColor: 'black'
     });
@@ -209,24 +209,6 @@
     engine.world.gravity.x = 0;
     engine.world.gravity.y = 0;
     engine.world.gravity.isPoint = true;
-    // create function to update output values & manipulate gravity
-    // function gravOutputUpdate(id, axis, val) {
-    //     console.log(id + ":" + axis + ":" +
-    //         val);
-    //     document.getElementById(id).innerHTML = val;
-    //     engine.world.gravity[axis] = val;
-    // }
-    // setInterval(function() {
-    //     var num = Math.ceil(Math.random() * 1000000000 % 9);
-    //     var i = 0.1;
-    //     if (num % 2 == 0) {
-    //         num = -0.1;
-    //     }
-    //     console.log(num * i);
-    //     engine.world.gravity['x'] = num * i;
-    //     engine.world.gravity['y'] = num * i;
-
-    // }, 3000);
     //重力感应计算x,y轴
     window.addEventListener('deviceorientation', DeviceOrientationHandler, false);
 
