@@ -206,7 +206,9 @@
         fillColor: 'lightgrey',
         strokeColor: 'black'
     });
-
+    engine.world.gravity.x = 0;
+    engine.world.gravity.y = 0;
+    engine.world.gravity.isPoint = true;
     // create function to update output values & manipulate gravity
     // function gravOutputUpdate(id, axis, val) {
     //     console.log(id + ":" + axis + ":" +
