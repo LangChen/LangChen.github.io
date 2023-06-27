@@ -252,8 +252,8 @@
             } else {
                 stageX.innerHTML = "向下倾斜" + x ;
             }
-            engine.world.gravity['y'] = x;
-            engine.world.gravity['x'] = y;
+            engine.world.gravity['y'] = y.toFixed(2);
+            engine.world.gravity['x'] = x.toFixed(2);
         }
 
     }
