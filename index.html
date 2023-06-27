@@ -240,8 +240,8 @@
         // var deriveW = document.body.clientWidth; //获得设备的宽度
         // var speed = (deriveW / 90) * (Number(gamma)); //手机旋转时，游戏人物移动速率
         if (alpha != null || beta != null || gamma != null) {
-            var x = (beta * 0.01).toFixed(2);
-            var y = (gamma * 0.01).toFixed(2);
+            var x = (beta * 0.01).toFixed(5);
+            var y = (gamma * 0.01).toFixed(5);
             if (gamma > 0) {
                 stageY.innerHTML = "向右倾斜" + y;
             } else {
