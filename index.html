@@ -243,14 +243,14 @@
             var x = beta * 0.01;
             var y = gamma * 0.01;
             if (gamma > 0) {
-                stageY.innerHTML = "向右倾斜" + y ;
+                stageY.innerHTML = "向右倾斜" + y.toFixed(2);
             } else {
-                stageY.innerHTML = "向左倾斜" + y ;
+                stageY.innerHTML = "向左倾斜" + y.toFixed(2);
             }
             if (beta > 0) {
-                stageX.innerHTML = "向上倾斜" + x ;
+                stageX.innerHTML = "向上倾斜" + x.toFixed(2);
             } else {
-                stageX.innerHTML = "向下倾斜" + x ;
+                stageX.innerHTML = "向下倾斜" + x.toFixed(2);
             }
             engine.world.gravity['y'] = y.toFixed(2);
             engine.world.gravity['x'] = x.toFixed(2);
