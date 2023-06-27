@@ -238,18 +238,20 @@
         // var deriveW = document.body.clientWidth; //获得设备的宽度
         // var speed = (deriveW / 90) * (Number(gamma)); //手机旋转时，游戏人物移动速率
         if (alpha != null || beta != null || gamma != null) {
+            var x = beta * 0.01;
+            var y = gamma * 0.01;
             if (gamma > 0) {
-                stageY.innerHTML = "向右倾斜" + gamma + "度";
+                stageY.innerHTML = "向右倾斜" + y ;
             } else {
-                stageY.innerHTML = "向左倾斜" + gamma + "度";
+                stageY.innerHTML = "向左倾斜" + y ;
             }
             if (beta > 0) {
-                stageX.innerHTML = "向上倾斜" + beta + "度";
+                stageX.innerHTML = "向上倾斜" + x ;
             } else {
-                stageX.innerHTML = "向下倾斜" + beta + "度";
+                stageX.innerHTML = "向下倾斜" + x ;
             }
-            engine.world.gravity['y'] = gamma * 0.01;
-            engine.world.gravity['x'] = beta * 0.01;
+            engine.world.gravity['y'] = y;
+            engine.world.gravity['x'] = x;
         }
 
     }
