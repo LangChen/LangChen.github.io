@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>MatterJs</title>
+    <title>大球吃小球</title>
     <style>
         body {
             background: #252525;
@@ -243,21 +243,9 @@
     engine.world.gravity.isPoint = true;
 
 
-    // if (window.DeviceOrientationEvent.requestPermission) {
-    //     alert('test')
-    //     window.DeviceOrientationEvent.requestPermission().then(state => {
-    //         alert("state", state)
-    //         if (state === "granted") { //允许
-    //             console.log("用户允许", state)
-    //         } else if (state === "denied") { //拒绝
-    //             alert('您已拒绝倾斜手机，请退出微信重新进入授权~');
-    //             console.log("用户拒绝", state)
-    //         } else if (state === "prompt") {
-    //             console.log("用户干了啥", state);
-    //             alert('遇到未知错误，请退出微信重新进入~')
-    //         }
-    //     })
-    // }
+    if (window.DeviceOrientationEvent.requestPermission) {
+        alert('游戏开始，IOS请点击右下角“IOS重力感应授权”体验游戏！')；
+    }
 
 
 
