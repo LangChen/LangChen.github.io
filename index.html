@@ -296,19 +296,19 @@
         if (typeof DeviceMotionEvent.requestPermission === 'function') {
             DeviceMotionEvent.requestPermission()
                 .then(response => {
-                    alert("1" + response)
+                    //alert("1" + response)
                 })
                 .catch(res => {
-                    alert(res);
+                    //alert(res);
                 })
 
             DeviceOrientationEvent.requestPermission()
                 .then(response => {
-                    alert("2" + response)
+                    //alert("2" + response)
 
                 })
                 .catch(res => {
-                    alert(res);
+                    //alert(res);
                 })
         }
     }, false);
