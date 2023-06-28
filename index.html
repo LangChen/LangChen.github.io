@@ -244,7 +244,7 @@
 
 
     if (window.DeviceOrientationEvent.requestPermission) {
-        alert('游戏开始，IOS请点击右下角“IOS重力感应授权”体验游戏！')；
+        alert('游戏开始，IOS请点击右下角“IOS重力感应授权”体验游戏！');
     }
 
 
@@ -301,6 +301,7 @@
         }
     }, false);
 
+    let totalCount = 0;
     Events.on(engine, 'collisionStart', function(event) {
         var pairs = event.pairs;
         for (var i = 0; i < pairs.length; i++) {
@@ -309,20 +310,29 @@
             if (pair.bodyA == ball && pair.bodyB == coin1) {
                 World.remove(engine.world, [coin1]);
                 alert("吃掉金币1！")
+                totalCount++;
             } else if (pair.bodyA == ball && pair.bodyB == coin2) {
                 World.remove(engine.world, [coin2]);
                 alert("吃掉金币2！")
+                totalCount++;
             } else if (pair.bodyA == ball && pair.bodyB == coin3) {
                 World.remove(engine.world, [coin3]);
                 alert("吃掉金币3！")
+                totalCount++;
             } else if (pair.bodyA == ball && pair.bodyB == coin4) {
                 World.remove(engine.world, [coin4]);
                 alert("吃掉金币4！")
+                totalCount++;
             } else if (pair.bodyA == ball && pair.bodyB == coin5) {
                 World.remove(engine.world, [coin5]);
                 alert("吃掉金币5！")
+                totalCount++;
             }
         }
+        if(totalCount == 5){
+            alter("您已吃完金币，请刷新页面重新开始游戏吧！");
+            window.reload();
+        }    
     });
 
 
