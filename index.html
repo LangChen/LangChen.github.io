@@ -301,7 +301,7 @@
         }
     }, false);
 
-    let totalCount = 0;
+    var totalCount = 0;
     Events.on(engine, 'collisionStart', function(event) {
         var pairs = event.pairs;
         for (var i = 0; i < pairs.length; i++) {
@@ -325,11 +325,11 @@
                 totalCount++;
             } else if (pair.bodyA == ball && pair.bodyB == coin5) {
                 World.remove(engine.world, [coin5]);
-                alert("吃掉金币5！")
+                alert("吃掉金币5！"+totalCount)
                 totalCount++;
             }
         }
-        if(totalCount == 5){
+        if(totalCount >= 5){
             alter("您已吃完金币，请刷新页面重新开始游戏吧！");
             window.reload();
         }    
